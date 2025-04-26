@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assista Agora - Vídeos Privados 18+</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        .header {
+            font-size: 28px;
+            margin-bottom: 10px;
+            color: #e60000;
+        }
+        .subheader {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .preview {
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto 20px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .preview img {
+            width: 100%;
+        }
+        .cta-button {
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color: #ff6600;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 10px;
+            margin-top: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        .reviews {
+            margin-top: 30px;
+            text-align: left;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .review {
+            background: #fff;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .timer {
+            font-size: 24px;
+            color: #e60000;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">🔥 Acesso Exclusivo a Vídeos Proibidos!</div>
+    <div class="subheader">Apenas 3 dias grátis! O tempo está acabando:</div>
+
+    <div class="timer" id="countdown">03:00</div>
+
+    <div class="preview">
+        <img src="push_preview.png" alt="Preview Video">
+    </div>
+
+    <a href="TVOYA_PARTNER_LINK" class="cta-button">Assistir Agora</a>
+
+    <div class="reviews">
+        <div class="review">
+            ⭐⭐⭐⭐⭐ "Conteúdo incrível, acesso super fácil. Recomendo!" — Pedro S.
+        </div>
+        <div class="review">
+            ⭐⭐⭐⭐⭐ "Vale muito a pena, 3 dias grátis e filmes TOP!" — Ana M.
+        </div>
+        <div class="review">
+            ⭐⭐⭐⭐ "Muito melhor que Netflix 😂🔥" — Lucas R.
+        </div>
+    </div>
+
+    <script>
+        let minutes = 2;
+        let seconds = 59;
+        const countdownElement = document.getElementById('countdown');
+
+        function updateCountdown() {
+            let min = minutes < 10 ? '0' + minutes : minutes;
+            let sec = seconds < 10 ? '0' + seconds : seconds;
+            countdownElement.textContent = `${min}:${sec}`;
+            if (seconds > 0) {
+                seconds--;
+            } else {
+                if (minutes > 0) {
+                    minutes--;
+                    seconds = 59;
+                } else {
+                    countdownElement.textContent = "00:00";
+                }
+            }
+        }
+
+        setInterval(updateCountdown, 1000);
+    </script>
+
+</body>
+</html>
